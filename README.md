@@ -19,7 +19,8 @@ A lightweight WordPress plugin that adds **falling snowflakes** and a **festive 
 - **Live preview** of the schedule being edited, light/dark background.
 - **Testing mode** per schedule: administrators see it whatever the date; visitors are not affected.
 - Respects `prefers-reduced-motion`, hidden when printing, decorative elements are `aria-hidden`.
-- No external requests, no tracking, no database tables. Assets load only when a schedule is active.
+- **Automatic updates** from GitHub releases (one-click or auto-updates).
+- No tracking, no database tables. Assets load only when a schedule is active.
 - Translation-ready; French translation included.
 
 ![The 15 banner styles](docs/banners.png)
@@ -86,6 +87,24 @@ Buttons on each card: **Move up**, **Move down**, **Duplicate**, **Delete**. The
 
 On 24 December the *Christmas Eve* schedule wins because it is listed above *Season*.
 
+## Updates
+
+Updates come from this repository's **GitHub releases**:
+
+- WordPress checks the latest release at most every 12 hours (cached; failures are retried after 1 hour). *Dashboard → Updates → Check again* or the *Check for updates* link on the Plugins screen forces a check.
+- New versions show the usual update notice and install in one click. Enable *auto-updates* on the plugin row to install them automatically.
+- *View details* shows the release notes.
+- Only the `festive-snowfall.zip` asset of a published (non-draft, non-prerelease) release of `cedlelensois-lang/festive-snowfall` is accepted.
+- The only external request is a call to the public GitHub API (`api.github.com`); no data about your site is sent. Unauthenticated GitHub API calls are limited to 60 per hour per server IP, which the 12-hour cache keeps well below.
+
+> Version 2.1.0 has no updater: install 2.1.1 manually once, then updates are automatic.
+
+Forks can point the updater to their own repository:
+
+```php
+add_filter( 'festive_snowfall_update_repository', fn() => 'my-account/festive-snowfall' );
+```
+
 ## Page caching
 
 Schedules are evaluated **on the server**. If you use a page cache (WP Rocket, LiteSpeed Cache, W3 Total Cache, a CDN…), **purge it on every schedule change date**, otherwise visitors may see an outdated style.
@@ -118,6 +137,7 @@ festive-snowfall.php                         Bootstrap
 includes/class-festive-snowfall.php          Settings model, migration, sanitization, schedule selection, front assets
 includes/class-festive-snowfall-admin.php    Settings page
 includes/class-festive-snowfall-period.php   Date period logic (pure PHP)
+includes/class-festive-snowfall-updater.php  Updates from GitHub releases
 assets/festive-snowfall.js|css               Front-end rendering (also used by the preview)
 assets/admin.js|css                          Schedule cards, colour pickers, live preview
 languages/                                   .pot template + French translation
@@ -130,6 +150,7 @@ tests/                                       Dependency-free PHP tests
 ```bash
 php tests/period-test.php
 php tests/plugin-test.php
+php tests/updater-test.php
 ```
 
 CI runs them on PHP 7.4 → 8.4, checks JS syntax and runs the official [WordPress Plugin Check](https://github.com/WordPress/plugin-check-action).
@@ -139,7 +160,7 @@ CI runs them on PHP 7.4 → 8.4, checks JS syntax and runs the official [WordPre
 Bump the version in `festive-snowfall.php` (header **and** `FESN_VERSION`), `readme.txt` (`Stable tag`) and `CHANGELOG.md`, then:
 
 ```bash
-git tag v2.1.0 && git push origin v2.1.0
+git tag v2.1.1 && git push origin v2.1.1
 ```
 
 The release workflow builds `festive-snowfall.zip` (development files excluded via `.gitattributes`) and attaches it to a GitHub release.

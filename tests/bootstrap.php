@@ -63,12 +63,32 @@ function is_embed() { return false; }
 function is_feed() { return false; }
 function apply_filters( $h, $v ) { return $v; }
 
+
+define( 'HOUR_IN_SECONDS', 3600 );
+$GLOBALS['fesn_test']['transients'] = array();
+$GLOBALS['fesn_test']['http']       = array();
+$GLOBALS['fesn_test']['response']   = null;
+function get_site_transient( $k ) { return isset( $GLOBALS['fesn_test']['transients'][ $k ] ) ? $GLOBALS['fesn_test']['transients'][ $k ]['v'] : false; }
+function set_site_transient( $k, $v, $ttl ) { $GLOBALS['fesn_test']['transients'][ $k ] = array( 'v' => $v, 'ttl' => $ttl ); return true; }
+function delete_site_transient( $k ) { unset( $GLOBALS['fesn_test']['transients'][ $k ] ); return true; }
+function wp_remote_get( $url, $args ) { $GLOBALS['fesn_test']['http'][] = array( $url, $args ); return fesn_t( 'response' ); }
+function is_wp_error( $x ) { return $x instanceof WP_Error; }
+class WP_Error { public function __construct( $c = '', $m = '' ) {} }
+function wp_remote_retrieve_response_code( $r ) { return is_array( $r ) ? $r['code'] : 0; }
+function wp_remote_retrieve_body( $r ) { return is_array( $r ) ? $r['body'] : ''; }
+function wp_kses_post( $h ) { return preg_replace( '#<(/?)(script|iframe)[^>]*>#i', '', $h ); }
+function wpautop( $t ) { return '<p>' . $t . '</p>'; }
+function wp_nonce_url( $u ) { return $u . '&_wpnonce=x'; }
+function trailingslashit( $s ) { return rtrim( $s, '/' ) . '/'; }
+function untrailingslashit( $s ) { return rtrim( $s, '/' ); }
+
 require dirname( __DIR__ ) . '/includes/class-festive-snowfall-period.php';
 define( 'FESN_VERSION', 'test' );
 define( 'FESN_FILE', dirname( __DIR__ ) . '/festive-snowfall.php' );
 define( 'FESN_URL', plugin_dir_url( FESN_FILE ) );
 require dirname( __DIR__ ) . '/includes/class-festive-snowfall.php';
 require dirname( __DIR__ ) . '/includes/class-festive-snowfall-admin.php';
+require dirname( __DIR__ ) . '/includes/class-festive-snowfall-updater.php';
 
 $GLOBALS['fesn_fail'] = 0;
 function check( $cond, $msg ) {

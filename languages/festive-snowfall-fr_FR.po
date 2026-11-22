@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Festive Snowfall 2.1.0\n"
-"Report-Msgid-Bugs-To: https://github.com/cedlelensois-lang/festive-snowfall/issues\n"
-"POT-Creation-Date: 2026-11-21 22:35+0000\n"
+"Project-Id-Version: Festive Snowfall 2.1.1\n"
+"Report-Msgid-Bugs-To: https://github.com/your-account/festive-snowfall/issues\n"
+"POT-Creation-Date: 2026-11-22 07:36+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -36,6 +36,9 @@ msgstr "Sélecteur CSS"
 
 msgid "Candy canes"
 msgstr "Sucres d'orge"
+
+msgid "Check for updates"
+msgstr "Vérifier les mises à jour"
 
 msgid "Christmas"
 msgstr "Noël"
@@ -263,6 +266,9 @@ msgstr "En haut de la page (défile avec le contenu)"
 
 msgid "Twinkling light string"
 msgstr "Guirlande lumineuse scintillante"
+
+msgid "Unable to rename the update folder."
+msgstr "Impossible de renommer le dossier de mise à jour."
 
 msgid "Up to 6 colours; each flake picks one at random. Leave empty to skip."
 msgstr "Jusqu'à 6 couleurs ; chaque flocon en prend une au hasard. Laissez vide pour ignorer."

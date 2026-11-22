@@ -19,7 +19,8 @@ Extension WordPress légère qui ajoute des **flocons qui tombent** et une **ban
 - **Aperçu en direct** de la programmation en cours de modification, fond clair/sombre.
 - **Mode test** par programmation : les administrateurs la voient quelle que soit la date ; les visiteurs ne sont pas concernés.
 - Respecte `prefers-reduced-motion`, masqué à l'impression, éléments décoratifs en `aria-hidden`.
-- Aucune requête externe, aucun pistage, aucune table en base. Fichiers chargés uniquement quand une programmation est active.
+- **Mises à jour automatiques** depuis les releases GitHub (en un clic ou automatiques).
+- Aucun pistage, aucune table en base. Fichiers chargés uniquement quand une programmation est active.
 - Prête pour la traduction ; traduction française incluse.
 
 ![Les 15 styles de bannière](docs/banners.png)
@@ -86,6 +87,24 @@ Boutons de chaque carte : **Monter**, **Descendre**, **Dupliquer**, **Supprimer*
 
 Le 24 décembre, *Réveillon* l'emporte car elle est placée au-dessus de *Saison*.
 
+## Mises à jour
+
+Les mises à jour viennent des **releases GitHub** de ce dépôt :
+
+- WordPress vérifie la dernière release au plus toutes les 12 heures (avec cache ; en cas d'échec, nouvel essai après 1 heure). *Tableau de bord → Mises à jour → Vérifier à nouveau* ou le lien *Vérifier les mises à jour* dans la liste des extensions force la vérification.
+- Une nouvelle version affiche la notification habituelle et s'installe en un clic. Activez les *mises à jour automatiques* sur la ligne de l'extension pour qu'elles s'installent seules.
+- *Afficher les détails* présente les notes de version.
+- Seul le fichier `festive-snowfall.zip` d'une release publiée (ni brouillon ni pré-version) de `cedlelensois-lang/festive-snowfall` est accepté.
+- La seule requête externe est un appel à l'API publique de GitHub (`api.github.com`) ; aucune donnée sur votre site n'est envoyée. L'API GitHub sans authentification est limitée à 60 appels par heure et par IP de serveur, très au-dessus de ce qu'impose le cache de 12 heures.
+
+> La version 2.1.0 n'a pas de module de mise à jour : installez la 2.1.1 manuellement une fois, ensuite les mises à jour sont automatiques.
+
+Un fork peut pointer vers son propre dépôt :
+
+```php
+add_filter( 'festive_snowfall_update_repository', fn() => 'mon-compte/festive-snowfall' );
+```
+
 ## Cache de pages
 
 Les programmations sont évaluées **côté serveur**. Avec un cache de pages (WP Rocket, LiteSpeed Cache, W3 Total Cache, un CDN…), **videz-le à chaque date de changement de programmation**, sinon des visiteurs pourraient voir un style périmé.
@@ -118,6 +137,7 @@ festive-snowfall.php                         Amorçage
 includes/class-festive-snowfall.php          Modèle de réglages, migration, validation, choix de la programmation, fichiers front
 includes/class-festive-snowfall-admin.php    Page de réglages
 includes/class-festive-snowfall-period.php   Logique de période (PHP pur)
+includes/class-festive-snowfall-updater.php  Mises à jour depuis les releases GitHub
 assets/festive-snowfall.js|css               Rendu sur le site (également utilisé par l'aperçu)
 assets/admin.js|css                          Cartes de programmation, couleurs, aperçu
 languages/                                   Modèle .pot + traduction française
@@ -130,6 +150,7 @@ tests/                                       Tests PHP sans dépendance
 ```bash
 php tests/period-test.php
 php tests/plugin-test.php
+php tests/updater-test.php
 ```
 
 La CI les exécute sous PHP 7.4 → 8.4, vérifie la syntaxe JS et lance le [Plugin Check officiel de WordPress](https://github.com/WordPress/plugin-check-action).
@@ -139,7 +160,7 @@ La CI les exécute sous PHP 7.4 → 8.4, vérifie la syntaxe JS et lance le [Plu
 Mettez à jour le numéro de version dans `festive-snowfall.php` (en-tête **et** `FESN_VERSION`), `readme.txt` (`Stable tag`) et `CHANGELOG.md`, puis :
 
 ```bash
-git tag v2.1.0 && git push origin v2.1.0
+git tag v2.1.1 && git push origin v2.1.1
 ```
 
 Le workflow de release construit `festive-snowfall.zip` (fichiers de développement exclus via `.gitattributes`) et l'attache à une release GitHub.

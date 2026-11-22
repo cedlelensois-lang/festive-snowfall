@@ -3,6 +3,16 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) · Versioning: [SemVer](https://semver.org/).
 
+## [2.1.1] – 2026-11-22
+
+### Added
+- Automatic updates from GitHub releases through the WordPress `Update URI` header and the `update_plugins_github.com` filter: update notices, one-click updates, auto-updates and release notes in *View details*.
+- *Check for updates* link on the Plugins screen.
+- `festive_snowfall_update_repository` filter (for forks).
+
+### Security
+- Only the `festive-snowfall.zip` asset of this repository's own, non-draft, non-prerelease releases is accepted; release notes are escaped. API failures are cached for one hour.
+
 ## [2.1.0] – 2026-11-21
 
 ### Added

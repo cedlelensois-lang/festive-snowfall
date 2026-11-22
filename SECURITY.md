@@ -22,4 +22,5 @@ Merci de **ne pas ouvrir de ticket public**. Utilisez le signalement privé de G
 - All admin output is escaped (`esc_html`, `esc_attr`, `esc_url`).
 - Front-end configuration is passed as JSON with `JSON_HEX_TAG | JSON_HEX_AMP | JSON_HEX_APOS | JSON_HEX_QUOT`, so it cannot break out of the `<script>` element.
 - The JavaScript never uses `innerHTML`; the CSS selector is only passed to `querySelector` inside `try/catch`.
-- No AJAX/REST endpoints, no custom database queries, no file writes, no external HTTP requests.
+- No AJAX/REST endpoints, no custom database queries, no file writes.
+- The only outgoing request is a read-only call to the public GitHub API for updates (no site data sent, results cached 12 h). Update packages are only accepted from this repository's own release assets; WordPress core downloads and installs them.

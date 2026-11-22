@@ -10,6 +10,7 @@ if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 }
 
 delete_option( 'festive_snowfall_options' );
+delete_site_transient( 'festive_snowfall_release' );
 
 if ( is_multisite() ) {
 	$festive_snowfall_sites = get_sites(

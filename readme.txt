@@ -4,7 +4,7 @@ Tags: christmas, snow, snowflakes, holiday, banner
 Requires at least: 6.3
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.1.0
+Stable tag: 2.1.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -21,7 +21,8 @@ Festive Snowfall adds a light holiday decoration to your site:
 * Banner at the top of the page, fixed at the top of the screen, or inside a theme element (CSS selector).
 * Live preview, duplicate / reorder schedules, testing mode for administrators.
 * Accessible: respects reduced-motion preferences, decorative elements hidden from screen readers.
-* No external requests, no tracking. Assets load only when needed.
+* Automatic updates from GitHub releases (one-click or auto-updates), no API key needed.
+* No tracking. Assets load only when needed.
 
 French translation included.
 
@@ -49,6 +50,10 @@ Tick *Testing* on that schedule. Only administrators will see it.
 
 In *General*, choose *Inside a theme element* and enter the CSS selector of your header (e.g. `#header` or `.site-header`).
 
+= How do updates work? =
+
+The plugin checks the latest GitHub release of cedlelensois-lang/festive-snowfall at most every 12 hours. New versions appear in *Dashboard > Updates* and can be installed in one click, or automatically if you enable auto-updates for this plugin. The only data exchanged is a request to the public GitHub API; nothing about your site is sent.
+
 = Can I hide it on some pages? =
 
 Use the `festive_snowfall_should_display` or `festive_snowfall_schedule` filters (see the GitHub README).
@@ -60,6 +65,9 @@ Use the `festive_snowfall_should_display` or `festive_snowfall_schedule` filters
 3. Settings page with schedules and live preview.
 
 == Changelog ==
+
+= 2.1.1 =
+* New: automatic updates from GitHub releases, "Check for updates" link, release notes in "View details".
 
 = 2.1.0 =
 * New: date-based schedules, each with its own flakes, colours, speed and banner.
@@ -75,6 +83,9 @@ Use the `festive_snowfall_should_display` or `festive_snowfall_schedule` filters
 * First version.
 
 == Upgrade Notice ==
+
+= 2.1.1 =
+Install this version manually once: from then on, updates arrive automatically from GitHub.
 
 = 2.1.0 =
 Adds date-based schedules and 10 new banners. Existing settings become your first schedule.

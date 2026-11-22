@@ -1,0 +1,111 @@
+/*!
+ * Festive Snowfall – front-end and admin preview styles.
+ * License: GPL-2.0-or-later
+ */
+
+/* ---------- Snowflakes ---------- */
+.fesn-snow {
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	z-index: 99998;
+	overflow: hidden;
+	--fesn-h: 105vh;
+}
+.fesn-snow.fesn-preview {
+	position: absolute;
+	z-index: 2;
+	--fesn-h: 320px;
+}
+.fesn-snow .fesn-flake {
+	position: absolute;
+	top: -30px;
+	line-height: 1;
+	user-select: none;
+	text-shadow: 0 0 3px rgba(255, 255, 255, .9);
+	animation-name: fesn-fall;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	will-change: transform;
+}
+.fesn-snow .fesn-flake.fesn-dot {
+	border-radius: 50%;
+	box-shadow: 0 0 4px rgba(255, 255, 255, .8);
+}
+@keyframes fesn-fall {
+	0%   { transform: translate(0, -30px) rotate(0deg); }
+	50%  { transform: translate(var(--fesn-dx, 25px), calc(var(--fesn-h) * .5)) rotate(180deg); }
+	100% { transform: translate(calc(var(--fesn-dx, 25px) * -.4), var(--fesn-h)) rotate(360deg); }
+}
+
+/* ---------- Banner ---------- */
+.fesn-banner {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: var(--fesn-bh, 34px);
+	font-size: var(--fesn-bh, 34px); /* light bulbs are sized in em */
+	overflow: hidden;
+	pointer-events: none;
+	background-repeat: repeat-x;
+	background-position: center top;
+	background-size: auto 100%;
+}
+.fesn-banner.fesn-fixed {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: var(--wp-admin--admin-bar--height, 0px);
+	z-index: 99997;
+}
+.fesn-banner-holly   { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='34' viewBox='0 0 80 34'%3E%3Cpath d='M38 17c-4-6-10-9-17-8 1 3-1 5-4 6 3 1 4 3 3 6 3-1 5 0 6 3 2-3 5-3 7-1 0-3 2-5 5-6z' fill='%231E6B3A'/%3E%3Cpath d='M42 17c4-6 10-9 17-8-1 3 1 5 4 6-3 1-4 3-3 6-3-1-5 0-6 3-2-3-5-3-7-1 0-3-2-5-5-6z' fill='%23257A43'/%3E%3Ccircle cx='40' cy='14' r='3.2' fill='%23C62828'/%3E%3Ccircle cx='36.5' cy='19' r='3' fill='%23B71C1C'/%3E%3Ccircle cx='43.5' cy='19' r='3' fill='%23D32F2F'/%3E%3C/svg%3E"); }
+.fesn-banner-pine    { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='34' viewBox='0 0 60 34'%3E%3Cpath d='M0 7l-2.7 11.3 M1.5 6l-1.7 -7.6 M3 7l-1.9 9.5 M4.5 6l-0.9 -6.5 M6 7l-2.0 9.4 M7.5 6l-1.0 -5.1 M9 7l-2.9 12.0 M10.5 6l-1.9 -5.4 M12 7l-1.3 12.0 M13.5 6l-0.3 -5.5 M15 7l-1.7 10.6 M16.5 6l-0.7 -8.8 M18 7l-2.2 13.0 M19.5 6l-1.2 -8.9 M21 7l-1.3 9.3 M22.5 6l-0.3 -6.2 M24 7l-2.8 10.0 M25.5 6l-1.8 -6.2 M27 7l-2.6 14.7 M28.5 6l-1.6 -7.3 M30 7l-2.3 13.5 M31.5 6l-1.3 -7.2 M33 7l-2.9 9.4 M34.5 6l-1.9 -5.8 M36 7l-2.1 13.8 M37.5 6l-1.1 -6.3 M39 7l-2.1 13.1 M40.5 6l-1.1 -6.2 M42 7l-1.6 14.6 M43.5 6l-0.6 -6.0 M45 7l-1.9 13.0 M46.5 6l-0.9 -8.5 M48 7l-2.4 14.1 M49.5 6l-1.4 -8.9 M51 7l-2.2 9.8 M52.5 6l-1.2 -8.0 M54 7l-2.0 10.1 M55.5 6l-1.0 -5.2 M57 7l-1.5 13.7 M58.5 6l-0.5 -7.3 M60 7l-2.4 15.1 M61.5 6l-1.4 -7.8' stroke='%232E6B34' stroke-width='1.6' stroke-linecap='round' fill='none'/%3E%3Cpath d='M0 7l-2.7 11.3 M4.5 6l-0.9 -6.5 M9 7l-2.9 12.0 M13.5 6l-0.3 -5.5 M18 7l-2.2 13.0 M22.5 6l-0.3 -6.2 M27 7l-2.6 14.7 M31.5 6l-1.3 -7.2 M36 7l-2.1 13.8 M40.5 6l-1.1 -6.2 M45 7l-1.9 13.0 M49.5 6l-1.4 -8.9 M54 7l-2.0 10.1 M58.5 6l-0.5 -7.3' stroke='%233F8A46' stroke-width='1.3' stroke-linecap='round' fill='none'/%3E%3Cpath d='M0 7 Q15 9 30 7 T60 7' stroke='%235D4037' stroke-width='2' fill='none'/%3E%3Ccircle cx='46' cy='22' r='3.2' fill='%23C62828'/%3E%3Ccircle cx='45' cy='21' r='1' fill='%23fff' opacity='.6'/%3E%3C/svg%3E"); }
+.fesn-banner-baubles { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='40' viewBox='0 0 70 40'%3E%3Cpath d='M0 3 Q17.5 9 35 3 T70 3' stroke='%23B8860B' stroke-width='1.5' fill='none'/%3E%3Cline x1='17' y1='6' x2='17' y2='16' stroke='%23999' stroke-width='.8'/%3E%3Crect x='14.5' y='15' width='5' height='3.5' rx='1' fill='%23C9A227'/%3E%3Ccircle cx='17' cy='25' r='7.5' fill='%23C62828'/%3E%3Ccircle cx='14.5' cy='22.5' r='2' fill='%23fff' opacity='.5'/%3E%3Cline x1='52' y1='6' x2='52' y2='10' stroke='%23999' stroke-width='.8'/%3E%3Crect x='49.5' y='9' width='5' height='3.5' rx='1' fill='%239E9E9E'/%3E%3Ccircle cx='52' cy='18' r='6' fill='%23D4A017'/%3E%3Ccircle cx='50' cy='16' r='1.6' fill='%23fff' opacity='.55'/%3E%3C/svg%3E"); }
+.fesn-banner-icicles { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='34' viewBox='0 0 60 34'%3E%3Cpath d='M2 7 L6 30 L10 7 Z M12 7 L15 20 L18 7 Z M20 7 L24 33 L28 7 Z M31 7 L33 16 L36 7 Z M38 7 L42 27 L46 7 Z M49 7 L52 19 L55 7 Z' fill='%23DCEEFB' stroke='%23A9CDE8' stroke-width='.6'/%3E%3Cpath d='M0 0 H60 V7 Q55 11 50 8 Q44 12 38 8 Q31 11 25 8 Q18 12 12 8 Q6 11 0 8 Z' fill='%23fff' stroke='%23D6E6F2' stroke-width='.6'/%3E%3C/svg%3E"); }
+.fesn-banner-canes       { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='34' viewBox='0 0 48 34'%3E%3Cg transform='translate(8 0)'%3E%3Cpath d='M0 32 V12 a6 6 0 0 1 12 0 v2' fill='none' stroke='%23fff' stroke-width='4.2' stroke-linecap='round'/%3E%3Cpath d='M0 32 V12 a6 6 0 0 1 12 0 v2' fill='none' stroke='%23D32F2F' stroke-width='4.2' stroke-linecap='round' stroke-dasharray='2.6 2.6'/%3E%3Cpath d='M0 32 V12 a6 6 0 0 1 12 0 v2' fill='none' stroke='%239E9E9E' stroke-width='.5' opacity='.6'/%3E%3C/g%3E%3Cg transform='translate(40 0) scale(-1 1)'%3E%3Cpath d='M0 32 V12 a6 6 0 0 1 12 0 v2' fill='none' stroke='%23fff' stroke-width='4.2' stroke-linecap='round'/%3E%3Cpath d='M0 32 V12 a6 6 0 0 1 12 0 v2' fill='none' stroke='%23D32F2F' stroke-width='4.2' stroke-linecap='round' stroke-dasharray='2.6 2.6'/%3E%3Cpath d='M0 32 V12 a6 6 0 0 1 12 0 v2' fill='none' stroke='%239E9E9E' stroke-width='.5' opacity='.6'/%3E%3C/g%3E%3C/svg%3E"); }
+.fesn-banner-stars       { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='34' viewBox='0 0 64 34'%3E%3Cpath d='M0 3 Q16 10 32 3 T64 3' stroke='%23C9A227' stroke-width='1.2' fill='none'/%3E%3Cline x1='16' y1='6.5' x2='16' y2='14' stroke='%23C9A227' stroke-width='.8'/%3E%3Cpolygon points='16.0,13.0 17.9,17.5 22.7,17.8 19.0,21.0 20.1,25.7 16.0,23.1 11.9,25.7 13.0,21.0 9.3,17.8 14.1,17.5' fill='%23F2C230' stroke='%23B8860B' stroke-width='.8'/%3E%3Cline x1='48' y1='6.5' x2='48' y2='9' stroke='%23C9A227' stroke-width='.8'/%3E%3Cpolygon points='48.0,9.0 49.3,12.2 52.8,12.5 50.1,14.7 50.9,18.0 48.0,16.2 45.1,18.0 45.9,14.7 43.2,12.5 46.7,12.2' fill='%23FFE082' stroke='%23C9A227' stroke-width='.7'/%3E%3C/svg%3E"); }
+.fesn-banner-gingerbread { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='34' viewBox='0 0 40 34'%3E%3Cg transform='translate(20 0)'%3E%3Cg stroke='%23A0522D' stroke-linecap='round'%3E%3Cline x1='-8' y1='17' x2='8' y2='17' stroke-width='5.5'/%3E%3Cline x1='0' y1='20' x2='-5' y2='30' stroke-width='5.5'/%3E%3Cline x1='0' y1='20' x2='5' y2='30' stroke-width='5.5'/%3E%3C/g%3E%3Ccircle cx='0' cy='19' r='5.5' fill='%23A0522D'/%3E%3Ccircle cx='0' cy='8.5' r='5' fill='%23A0522D'/%3E%3Ccircle cx='-1.8' cy='7.5' r='.8' fill='%23fff'/%3E%3Ccircle cx='1.8' cy='7.5' r='.8' fill='%23fff'/%3E%3Cpath d='M-2 10.3 Q0 12 2 10.3' stroke='%23fff' stroke-width='.8' fill='none'/%3E%3Ccircle cx='0' cy='17' r='1' fill='%23E53935'/%3E%3Ccircle cx='0' cy='21' r='1' fill='%2343A047'/%3E%3Cpath d='M-9 15.5 l1.2 1.5 l1.2 -1.5 M9 15.5 l-1.2 1.5 l-1.2 -1.5 M-6 29 l1.2 -1.2 l1.2 1.2 M6 29 l-1.2 -1.2 l-1.2 1.2' stroke='%23fff' stroke-width='.7' fill='none'/%3E%3C/g%3E%3C/svg%3E"); }
+.fesn-banner-mistletoe   { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='34' viewBox='0 0 64 34'%3E%3Cpath d='M0 2 H64' stroke='%23C62828' stroke-width='3'/%3E%3Cpath d='M32 3 v6' stroke='%235D4037' stroke-width='1.2'/%3E%3Cellipse cx='25' cy='15' rx='8' ry='3.6' transform='rotate(35 25 15)' fill='%23558B2F'/%3E%3Cellipse cx='39' cy='15' rx='8' ry='3.6' transform='rotate(-35 39 15)' fill='%23689F38'/%3E%3Cellipse cx='28' cy='22' rx='7' ry='3.2' transform='rotate(70 28 22)' fill='%237CB342'/%3E%3Cellipse cx='36' cy='22' rx='7' ry='3.2' transform='rotate(-70 36 22)' fill='%23558B2F'/%3E%3Ccircle cx='32' cy='12' r='2.4' fill='%23fff' stroke='%23ccc' stroke-width='.4'/%3E%3Ccircle cx='29.5' cy='14.5' r='2.2' fill='%23fff' stroke='%23ccc' stroke-width='.4'/%3E%3Ccircle cx='34.5' cy='14.5' r='2.2' fill='%23fff' stroke='%23ccc' stroke-width='.4'/%3E%3Cpath d='M28 2 q-4 4 -1 6 q3 -2 5 -6 q2 4 5 6 q3 -2 -1 -6 z' fill='%23B71C1C'/%3E%3C/svg%3E"); }
+.fesn-banner-tinsel      { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21' height='34' viewBox='0 0 21 34'%3E%3Cline x1='0.5' y1='3' x2='0.7' y2='23.3' stroke='%23D4AF37' stroke-width='1'/%3E%3Cline x1='2.0' y1='3' x2='1.9' y2='29.9' stroke='%23F5D76E' stroke-width='1'/%3E%3Cline x1='3.5' y1='3' x2='3.8' y2='24.1' stroke='%23B8860B' stroke-width='1'/%3E%3Cline x1='5.0' y1='3' x2='5.0' y2='19.6' stroke='%23FFE9A0' stroke-width='1'/%3E%3Cline x1='6.5' y1='3' x2='7.7' y2='25.8' stroke='%23C9A227' stroke-width='1'/%3E%3Cline x1='8.0' y1='3' x2='7.2' y2='18.3' stroke='%23D4AF37' stroke-width='1'/%3E%3Cline x1='9.5' y1='3' x2='10.7' y2='18.3' stroke='%23F5D76E' stroke-width='1'/%3E%3Cline x1='11.0' y1='3' x2='9.2' y2='26.7' stroke='%23B8860B' stroke-width='1'/%3E%3Cline x1='12.5' y1='3' x2='14.4' y2='30.8' stroke='%23FFE9A0' stroke-width='1'/%3E%3Cline x1='14.0' y1='3' x2='14.5' y2='26.2' stroke='%23C9A227' stroke-width='1'/%3E%3Cline x1='15.5' y1='3' x2='13.6' y2='19.2' stroke='%23D4AF37' stroke-width='1'/%3E%3Cline x1='17.0' y1='3' x2='15.2' y2='24.4' stroke='%23F5D76E' stroke-width='1'/%3E%3Cline x1='18.5' y1='3' x2='17.5' y2='19.7' stroke='%23B8860B' stroke-width='1'/%3E%3Cline x1='20.0' y1='3' x2='19.9' y2='17.4' stroke='%23FFE9A0' stroke-width='1'/%3E%3Crect x='0' y='0' width='21' height='5' fill='%23D4AF37'/%3E%3Crect x='0' y='1' width='21' height='1.2' fill='%23FFF3C4' opacity='.8'/%3E%3C/svg%3E"); }
+.fesn-banner-gifts       { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='34' viewBox='0 0 80 34'%3E%3Cpath d='M0 2 Q20 7 40 2 T80 2' stroke='%239E9E9E' stroke-width='.8' fill='none'/%3E%3Cline x1='18' y1='5' x2='18' y2='13' stroke='%239E9E9E' stroke-width='.7'/%3E%3Crect x='10' y='14' width='16' height='14' rx='1' fill='%23C62828'/%3E%3Crect x='16.5' y='14' width='3' height='14' fill='%23F2C230'/%3E%3Crect x='10' y='19.5' width='16' height='3' fill='%23F2C230'/%3E%3Cellipse cx='15.0' cy='12' rx='3.2' ry='2' fill='none' stroke='%23F2C230' stroke-width='1.6'/%3E%3Cellipse cx='21.0' cy='12' rx='3.2' ry='2' fill='none' stroke='%23F2C230' stroke-width='1.6'/%3E%3Cline x1='58' y1='5' x2='58' y2='9' stroke='%239E9E9E' stroke-width='.7'/%3E%3Crect x='51' y='10' width='14' height='12' rx='1' fill='%232E7D32'/%3E%3Crect x='56.5' y='10' width='3' height='12' fill='%23E53935'/%3E%3Crect x='51' y='14.5' width='14' height='3' fill='%23E53935'/%3E%3Cellipse cx='55.0' cy='8' rx='3.2' ry='2' fill='none' stroke='%23E53935' stroke-width='1.6'/%3E%3Cellipse cx='61.0' cy='8' rx='3.2' ry='2' fill='none' stroke='%23E53935' stroke-width='1.6'/%3E%3C/svg%3E"); }
+.fesn-banner-trees       { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='34' viewBox='0 0 56 34'%3E%3Cg transform='translate(14 0)'%3E%3Crect x='-1.8' y='28' width='3.6' height='5' fill='%236D4C41'/%3E%3Cpolygon points='0,7 -7,17 7,17' fill='%232E7D32'/%3E%3Cpolygon points='0,12 -9,23 9,23' fill='%232E7D32'/%3E%3Cpolygon points='0,17 -11,29 11,29' fill='%232E7D32'/%3E%3Cpolygon points='0.0,1.8 0.8,3.8 3.0,4.0 1.4,5.4 1.9,7.6 0.0,6.4 -1.9,7.6 -1.4,5.4 -3.0,4.0 -0.8,3.8' fill='%23F2C230'/%3E%3Ccircle cx='-3' cy='20' r='1.3' fill='%23E53935'/%3E%3Ccircle cx='4' cy='25' r='1.3' fill='%23FDD835'/%3E%3Ccircle cx='2' cy='15' r='1.1' fill='%2342A5F5'/%3E%3Ccircle cx='-5' cy='26' r='1.1' fill='%23fff'/%3E%3C/g%3E%3Cg transform='translate(42 0)'%3E%3Crect x='-1.8' y='28' width='3.6' height='5' fill='%236D4C41'/%3E%3Cpolygon points='0,7 -7,17 7,17' fill='%23388E3C'/%3E%3Cpolygon points='0,12 -9,23 9,23' fill='%23388E3C'/%3E%3Cpolygon points='0,17 -11,29 11,29' fill='%23388E3C'/%3E%3Cpolygon points='0.0,1.8 0.8,3.8 3.0,4.0 1.4,5.4 1.9,7.6 0.0,6.4 -1.9,7.6 -1.4,5.4 -3.0,4.0 -0.8,3.8' fill='%23F2C230'/%3E%3Ccircle cx='-3' cy='20' r='1.3' fill='%23E53935'/%3E%3Ccircle cx='4' cy='25' r='1.3' fill='%23FDD835'/%3E%3Ccircle cx='2' cy='15' r='1.1' fill='%2342A5F5'/%3E%3Ccircle cx='-5' cy='26' r='1.1' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E"); }
+.fesn-banner-snowmen     { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='34' viewBox='0 0 40 34'%3E%3Cg transform='translate(20 0)'%3E%3Ccircle cx='0' cy='25' r='7.5' fill='%23fff' stroke='%23B0C4D4' stroke-width='.8'/%3E%3Ccircle cx='0' cy='13' r='5.5' fill='%23fff' stroke='%23B0C4D4' stroke-width='.8'/%3E%3Crect x='-5.5' y='6.5' width='11' height='1.6' fill='%23222'/%3E%3Crect x='-3.5' y='0' width='7' height='7' fill='%23222'/%3E%3Crect x='-3.5' y='4.5' width='7' height='1.4' fill='%23C62828'/%3E%3Ccircle cx='-1.8' cy='12' r='.8' fill='%23222'/%3E%3Ccircle cx='1.8' cy='12' r='.8' fill='%23222'/%3E%3Cpolygon points='0,13.4 4.5,14.4 0,15' fill='%23FB8C00'/%3E%3Cpath d='M-5 17.5 Q0 20 5 17.5' stroke='%23C62828' stroke-width='2.4' fill='none'/%3E%3Cpath d='M3 18.5 l1.5 5' stroke='%23C62828' stroke-width='2'/%3E%3Ccircle cx='0' cy='23' r='.9' fill='%23222'/%3E%3Ccircle cx='0' cy='27' r='.9' fill='%23222'/%3E%3C/g%3E%3C/svg%3E"); }
+.fesn-banner-ribbon      { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='34' viewBox='0 0 80 34'%3E%3Cpath d='M0 5 Q40 24 80 5' stroke='%23C62828' stroke-width='4.5' fill='none'/%3E%3Cpath d='M0 4 Q40 22 80 4' stroke='%23EF5350' stroke-width='1' fill='none' opacity='.7'/%3E%3Cg transform='translate(0 5)'%3E%3Cpath d='M0 0 l-3 9 l2.5 -1.5 l1 2.5 z M0 0 l3 9 l-2.5 -1.5 l-1 2.5 z' fill='%23B71C1C'/%3E%3Cpath d='M0 0 C-4 -6 -10 -2 -8 2 C-6 5 -2 2 0 0 Z M0 0 C4 -6 10 -2 8 2 C6 5 2 2 0 0 Z' fill='%23E53935' stroke='%23B71C1C' stroke-width='.6'/%3E%3Ccircle cx='0' cy='0' r='2' fill='%23F2C230'/%3E%3C/g%3E%3Cg transform='translate(80 5)'%3E%3Cpath d='M0 0 l-3 9 l2.5 -1.5 l1 2.5 z M0 0 l3 9 l-2.5 -1.5 l-1 2.5 z' fill='%23B71C1C'/%3E%3Cpath d='M0 0 C-4 -6 -10 -2 -8 2 C-6 5 -2 2 0 0 Z M0 0 C4 -6 10 -2 8 2 C6 5 2 2 0 0 Z' fill='%23E53935' stroke='%23B71C1C' stroke-width='.6'/%3E%3Ccircle cx='0' cy='0' r='2' fill='%23F2C230'/%3E%3C/g%3E%3C/svg%3E"); }
+.fesn-banner-poinsettia  { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='34' viewBox='0 0 70 34'%3E%3Cellipse cx='17' cy='5.800000000000001' rx='2.76' ry='5.75' transform='rotate(18 17 15)' fill='%232E7D32'/%3E%3Cellipse cx='17' cy='5.800000000000001' rx='2.76' ry='5.75' transform='rotate(162 17 15)' fill='%232E7D32'/%3E%3Cellipse cx='17' cy='5.800000000000001' rx='2.76' ry='5.75' transform='rotate(234 17 15)' fill='%232E7D32'/%3E%3Cellipse cx='17' cy='5.800000000000001' rx='2.76' ry='5.75' transform='rotate(306 17 15)' fill='%232E7D32'/%3E%3Cellipse cx='17' cy='8.100000000000001' rx='2.9899999999999998' ry='6.8999999999999995' transform='rotate(0 17 15)' fill='%23C62828'/%3E%3Cellipse cx='17' cy='8.100000000000001' rx='2.9899999999999998' ry='6.8999999999999995' transform='rotate(36 17 15)' fill='%23E53935'/%3E%3Cellipse cx='17' cy='8.100000000000001' rx='2.9899999999999998' ry='6.8999999999999995' transform='rotate(72 17 15)' fill='%23C62828'/%3E%3Cellipse cx='17' cy='8.100000000000001' rx='2.9899999999999998' ry='6.8999999999999995' transform='rotate(108 17 15)' fill='%23E53935'/%3E%3Cellipse cx='17' cy='8.100000000000001' rx='2.9899999999999998' ry='6.8999999999999995' transform='rotate(144 17 15)' fill='%23C62828'/%3E%3Cellipse cx='17' cy='8.100000000000001' rx='2.9899999999999998' ry='6.8999999999999995' transform='rotate(180 17 15)' fill='%23E53935'/%3E%3Cellipse cx='17' cy='8.100000000000001' rx='2.9899999999999998' ry='6.8999999999999995' transform='rotate(216 17 15)' fill='%23C62828'/%3E%3Cellipse cx='17' cy='8.100000000000001' rx='2.9899999999999998' ry='6.8999999999999995' transform='rotate(252 17 15)' fill='%23E53935'/%3E%3Cellipse cx='17' cy='8.100000000000001' rx='2.9899999999999998' ry='6.8999999999999995' transform='rotate(288 17 15)' fill='%23C62828'/%3E%3Cellipse cx='17' cy='8.100000000000001' rx='2.9899999999999998' ry='6.8999999999999995' transform='rotate(324 17 15)' fill='%23E53935'/%3E%3Ccircle cx='17' cy='15' r='1.8399999999999999' fill='%23FDD835'/%3E%3Ccircle cx='18.725' cy='16.15' r='0.9199999999999999' fill='%239CCC65'/%3E%3Cellipse cx='52' cy='6.8' rx='2.16' ry='4.5' transform='rotate(18 52 14)' fill='%232E7D32'/%3E%3Cellipse cx='52' cy='6.8' rx='2.16' ry='4.5' transform='rotate(162 52 14)' fill='%232E7D32'/%3E%3Cellipse cx='52' cy='6.8' rx='2.16' ry='4.5' transform='rotate(234 52 14)' fill='%232E7D32'/%3E%3Cellipse cx='52' cy='6.8' rx='2.16' ry='4.5' transform='rotate(306 52 14)' fill='%232E7D32'/%3E%3Cellipse cx='52' cy='8.6' rx='2.3400000000000003' ry='5.4' transform='rotate(0 52 14)' fill='%23C62828'/%3E%3Cellipse cx='52' cy='8.6' rx='2.3400000000000003' ry='5.4' transform='rotate(36 52 14)' fill='%23E53935'/%3E%3Cellipse cx='52' cy='8.6' rx='2.3400000000000003' ry='5.4' transform='rotate(72 52 14)' fill='%23C62828'/%3E%3Cellipse cx='52' cy='8.6' rx='2.3400000000000003' ry='5.4' transform='rotate(108 52 14)' fill='%23E53935'/%3E%3Cellipse cx='52' cy='8.6' rx='2.3400000000000003' ry='5.4' transform='rotate(144 52 14)' fill='%23C62828'/%3E%3Cellipse cx='52' cy='8.6' rx='2.3400000000000003' ry='5.4' transform='rotate(180 52 14)' fill='%23E53935'/%3E%3Cellipse cx='52' cy='8.6' rx='2.3400000000000003' ry='5.4' transform='rotate(216 52 14)' fill='%23C62828'/%3E%3Cellipse cx='52' cy='8.6' rx='2.3400000000000003' ry='5.4' transform='rotate(252 52 14)' fill='%23E53935'/%3E%3Cellipse cx='52' cy='8.6' rx='2.3400000000000003' ry='5.4' transform='rotate(288 52 14)' fill='%23C62828'/%3E%3Cellipse cx='52' cy='8.6' rx='2.3400000000000003' ry='5.4' transform='rotate(324 52 14)' fill='%23E53935'/%3E%3Ccircle cx='52' cy='14' r='1.4400000000000002' fill='%23FDD835'/%3E%3Ccircle cx='53.35' cy='14.9' r='0.7200000000000001' fill='%239CCC65'/%3E%3C/svg%3E"); }
+.fesn-banner-lights {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='88' height='20' viewBox='0 0 88 20'%3E%3Cpath d='M0 3 Q22 15 44 3 T88 3' stroke='%232F3B2F' stroke-width='1.6' fill='none'/%3E%3C/svg%3E");
+	background-size: 2.588em .588em;
+	background-position: 0 0;
+}
+.fesn-banner-lights .fesn-bulb {
+	position: absolute;
+	top: .26em;
+	width: .3em;
+	height: .48em;
+	margin-left: -.15em;
+	border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+	background: currentColor;
+	box-shadow: 0 0 .25em currentColor, 0 0 .5em currentColor;
+	animation: fesn-twinkle 1.6s ease-in-out infinite alternate;
+}
+.fesn-banner-lights .fesn-bulb::before {
+	content: "";
+	position: absolute;
+	left: 25%;
+	top: -.09em;
+	width: 50%;
+	height: .12em;
+	background: #3a3a3a;
+	border-radius: 1px;
+}
+@keyframes fesn-twinkle {
+	0%   { opacity: 1; }
+	100% { opacity: .35; box-shadow: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.fesn-banner-lights .fesn-bulb { animation: none; }
+}
+@media print {
+	.fesn-snow, .fesn-banner { display: none !important; }
+}

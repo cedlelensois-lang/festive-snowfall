@@ -1,0 +1,21 @@
+name: Release ZIP
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build installable ZIP (respects .gitattributes export-ignore)
+        run: git archive --format=zip --prefix=festive-snowfall/ -o festive-snowfall.zip HEAD
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: festive-snowfall.zip
+          generate_release_notes: true

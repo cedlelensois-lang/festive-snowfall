@@ -1,0 +1,174 @@
+/*!
+ * Festive Snowfall – settings page styles.
+ * License: GPL-2.0-or-later
+ */
+.fesn-layout {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 24px;
+	align-items: flex-start;
+}
+.fesn-form {
+	flex: 1 1 600px;
+	min-width: 0;
+}
+.fesn-intro {
+	max-width: 760px;
+}
+
+/* Schedule cards */
+.fesn-schedules {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 12px 0;
+}
+.fesn-schedule {
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-left: 4px solid #c3c4c7;
+	border-radius: 4px;
+}
+.fesn-schedule.is-active {
+	border-left-color: #2271b1;
+}
+.fesn-schedule > summary {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px 12px;
+	padding: 12px 16px;
+	cursor: pointer;
+	list-style: none;
+}
+.fesn-schedule > summary::-webkit-details-marker {
+	display: none;
+}
+.fesn-schedule > summary::before {
+	content: "\f345"; /* dashicons-arrow-right-alt2 */
+	font: normal 16px/1 dashicons;
+	color: #787c82;
+	transition: transform .15s;
+}
+.fesn-schedule[open] > summary::before {
+	transform: rotate(90deg);
+}
+.fesn-schedule > summary:focus-visible {
+	outline: 2px solid #2271b1;
+	outline-offset: -2px;
+}
+.fesn-schedule-title {
+	font-weight: 600;
+	font-size: 14px;
+}
+.fesn-schedule-dates {
+	color: #50575e;
+}
+.fesn-badge {
+	display: inline-block;
+	padding: 1px 8px;
+	border-radius: 10px;
+	font-size: 12px;
+	line-height: 1.6;
+}
+.fesn-badge[hidden] {
+	display: none;
+}
+.fesn-badge-today {
+	background: #d1f0d8;
+	color: #0a5c1f;
+}
+.fesn-badge-test {
+	background: #fcf0d4;
+	color: #7a4b00;
+}
+.fesn-schedule-body {
+	padding: 0 16px 8px;
+	border-top: 1px solid #f0f0f1;
+}
+.fesn-schedule-body .form-table th {
+	width: 160px;
+}
+.fesn-toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px;
+	padding-top: 12px;
+}
+.fesn-toolbar .button-link-delete {
+	margin-left: auto;
+}
+
+/* Fields */
+.fesn-types {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	gap: 6px 16px;
+	margin-top: 10px;
+}
+.fesn-types legend {
+	grid-column: 1 / -1;
+	margin-bottom: 4px;
+	color: #50575e;
+}
+.fesn-type {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+}
+.fesn-glyph {
+	display: inline-block;
+	width: 1.4em;
+	font-size: 18px;
+	text-align: center;
+	color: #3b82b8;
+}
+.fesn-colors {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+#fesn-add .dashicons {
+	vertical-align: text-bottom;
+}
+
+/* Preview */
+.fesn-preview-box {
+	flex: 0 1 420px;
+	position: sticky;
+	top: 48px;
+	background: #fff;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
+	padding: 0 16px 8px;
+}
+.fesn-preview-name {
+	margin: 0 0 8px;
+}
+.fesn-preview-stage {
+	position: relative;
+	height: 320px;
+	overflow: hidden;
+	border-radius: 4px;
+	background: linear-gradient(#f6f7f7, #dcdcde);
+	transition: background .3s;
+}
+.fesn-preview-stage.is-dark {
+	background: linear-gradient(#1d2a3a, #34495e);
+}
+.fesn-preview-header {
+	position: relative;
+	background: rgba(255, 255, 255, .92);
+	color: #1d2327;
+	font-weight: 600;
+}
+.fesn-preview-header > span {
+	display: block;
+	padding: 14px 16px;
+}
+@media (max-width: 960px) {
+	.fesn-preview-box {
+		position: static;
+		flex-basis: 100%;
+	}
+}

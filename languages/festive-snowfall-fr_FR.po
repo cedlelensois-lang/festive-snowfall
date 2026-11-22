@@ -1,0 +1,280 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Festive Snowfall 2.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/cedlelensois-lang/festive-snowfall/issues\n"
+"POT-Creation-Date: 2026-11-21 22:35+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr_FR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Domain: festive-snowfall\n"
+
+msgid "0 disables snow on that device type."
+msgstr "0 désactive la neige sur ce type d'appareil."
+
+msgid "1 = very slow, 10 = very fast."
+msgstr "1 = très lent, 10 = très rapide."
+
+msgid "Add a schedule"
+msgstr "Ajouter une programmation"
+
+msgid "Asterisk"
+msgstr "Astérisque"
+
+msgid "Banner position"
+msgstr "Position de la bannière"
+
+msgid "Banner style"
+msgstr "Style de bannière"
+
+msgid "Both days are included. The site time zone (Settings > General) is used."
+msgstr "Les deux jours sont inclus. Le fuseau horaire du site (Réglages > Général) est utilisé."
+
+msgid "CSS selector"
+msgstr "Sélecteur CSS"
+
+msgid "Candy canes"
+msgstr "Sucres d'orge"
+
+msgid "Christmas"
+msgstr "Noël"
+
+msgid "Christmas trees"
+msgstr "Sapins de Noël"
+
+msgid "Classic crystal"
+msgstr "Cristal classique"
+#, php-format
+
+msgid "Colour %d"
+msgstr "Couleur %d"
+
+msgid "Colours"
+msgstr "Couleurs"
+
+msgid "Computer"
+msgstr "Ordinateur"
+#, php-format
+
+msgid "Copy of %s"
+msgstr "Copie de %s"
+
+msgid "Dates"
+msgstr "Dates"
+
+msgid "Decoration"
+msgstr "Décor"
+
+msgid "Delete"
+msgstr "Supprimer"
+
+msgid "Delete this schedule?"
+msgstr "Supprimer cette programmation ?"
+
+msgid "Duplicate"
+msgstr "Dupliquer"
+
+msgid "Each schedule has its own dates and style. When several schedules overlap, the first one in the list wins: put short periods (e.g. 24–25 December) above longer ones."
+msgstr "Chaque programmation a ses propres dates et son propre style. Si plusieurs programmations se chevauchent, la première de la liste l'emporte : placez les périodes courtes (ex. 24–25 décembre) au-dessus des plus longues."
+
+msgid "Enable Festive Snowfall"
+msgstr "Activer Festive Snowfall"
+
+msgid "Falling snowflakes and festive banners (15 Christmas styles) with date-based schedules: each period can have its own flakes, colours, speed and banner."
+msgstr "Flocons qui tombent et bannières festives (15 styles de Noël) avec programmations par date : chaque période peut avoir ses propres flocons, couleurs, vitesse et bannière."
+
+msgid "Festive Snowfall"
+msgstr "Festive Snowfall"
+
+msgid "Fine crystal"
+msgstr "Cristal fin"
+
+msgid "Fixed at the top of the screen"
+msgstr "Fixée en haut de l'écran"
+
+msgid "Flake shapes (select several to mix them)"
+msgstr "Types de flocons (cochez-en plusieurs pour les mélanger)"
+
+msgid "From"
+msgstr "Du"
+
+msgid "General"
+msgstr "Général"
+
+msgid "Gingerbread men"
+msgstr "Bonshommes en pain d'épices"
+
+msgid "Gold tinsel"
+msgstr "Guirlande dorée"
+
+msgid "Golden stars"
+msgstr "Étoiles dorées"
+
+msgid "Hanging baubles"
+msgstr "Boules suspendues"
+
+msgid "Hanging gifts"
+msgstr "Cadeaux suspendus"
+
+msgid "Height (px)"
+msgstr "Hauteur (px)"
+
+msgid "Holly garland"
+msgstr "Guirlande de houx"
+
+msgid "Inside a theme element (CSS selector below)"
+msgstr "Dans un élément du thème (sélecteur CSS ci-dessous)"
+
+msgid "Live preview"
+msgstr "Aperçu en direct"
+
+msgid "Max"
+msgstr "Max"
+
+msgid "Maximum number of schedules reached."
+msgstr "Nombre maximum de programmations atteint."
+
+msgid "Min"
+msgstr "Min"
+
+msgid "Mistletoe"
+msgstr "Gui"
+
+msgid "Mobile"
+msgstr "Mobile"
+
+msgid "Move down"
+msgstr "Descendre"
+
+msgid "Move up"
+msgstr "Monter"
+
+msgid "Name"
+msgstr "Nom"
+
+msgid "New schedule"
+msgstr "Nouvelle programmation"
+
+msgid "No banner"
+msgstr "Aucune bannière"
+
+msgid "No schedule matches today: nothing is displayed to visitors."
+msgstr "Aucune programmation ne correspond à aujourd'hui : rien n'est affiché aux visiteurs."
+#, php-format
+
+msgid "Only the first %d schedules have been kept."
+msgstr "Seules les %d premières programmations ont été conservées."
+
+msgid "Ornate crystal"
+msgstr "Cristal orné"
+
+msgid "Pine branches"
+msgstr "Branches de sapin"
+
+msgid "Poinsettias"
+msgstr "Poinsettias"
+
+msgid "Quantity"
+msgstr "Quantité"
+
+msgid "Red ribbon and bows"
+msgstr "Ruban rouge et nœuds"
+
+msgid "Repeat every year (only day and month are used)"
+msgstr "Répéter chaque année (seuls le jour et le mois comptent)"
+
+msgid "Round snowball"
+msgstr "Boule de neige ronde"
+
+msgid "Schedule"
+msgstr "Programmation"
+#, php-format
+
+msgid "Schedule %d"
+msgstr "Programmation %d"
+#, php-format
+
+msgid "Schedule %d: invalid date, the default date has been used."
+msgstr "Programmation %d : date invalide, la date par défaut a été utilisée."
+#, php-format
+
+msgid "Schedule %d: the end date is before the start date, it will never be displayed."
+msgstr "Programmation %d : la date de fin est antérieure à la date de début, elle ne s'affichera jamais."
+
+msgid "Schedules"
+msgstr "Programmations"
+
+msgid "Settings"
+msgstr "Réglages"
+
+msgid "Show falling snowflakes"
+msgstr "Afficher des flocons qui tombent"
+
+msgid "Shows the schedule you are editing. Remember to save."
+msgstr "Affiche la programmation en cours de modification. Pensez à enregistrer."
+
+msgid "Size (px)"
+msgstr "Taille (px)"
+
+msgid "Snow and icicles"
+msgstr "Neige et glaçons"
+
+msgid "Snowflakes"
+msgstr "Flocons"
+
+msgid "Snowmen"
+msgstr "Bonshommes de neige"
+
+msgid "Speed"
+msgstr "Vitesse"
+
+msgid "Star"
+msgstr "Étoile"
+
+msgid "Testing"
+msgstr "Test"
+#, php-format
+
+msgid "Testing mode: administrators see the schedule “%s” whatever the date."
+msgstr "Mode test : les administrateurs voient la programmation « %s » quelle que soit la date."
+
+msgid "Testing: always show this schedule to administrators"
+msgstr "Test : toujours afficher cette programmation aux administrateurs"
+
+msgid "The banner is inserted at the start of the first matching element. If none is found, it falls back to the top of the page."
+msgstr "La bannière est insérée au début du premier élément correspondant. S'il n'est pas trouvé, elle est placée en haut de la page."
+
+msgid "The decoration is disabled."
+msgstr "Le décor est désactivé."
+
+msgid "Today"
+msgstr "Aujourd'hui"
+#, php-format
+
+msgid "Today, visitors see the schedule “%s”."
+msgstr "Aujourd'hui, les visiteurs voient la programmation « %s »."
+
+msgid "Toggle light / dark background"
+msgstr "Basculer fond clair / sombre"
+
+msgid "Top of the page (scrolls with the content)"
+msgstr "En haut de la page (défile avec le contenu)"
+
+msgid "Twinkling light string"
+msgstr "Guirlande lumineuse scintillante"
+
+msgid "Up to 6 colours; each flake picks one at random. Leave empty to skip."
+msgstr "Jusqu'à 6 couleurs ; chaque flocon en prend une au hasard. Laissez vide pour ignorer."
+
+msgid "Your site header"
+msgstr "En-tête de votre site"
+
+msgid "e.g. Advent, Christmas Eve, New Year"
+msgstr "ex. Avent, Réveillon, Nouvel An"
+
+msgid "every year"
+msgstr "chaque année"
+
+msgid "to"
+msgstr "au"

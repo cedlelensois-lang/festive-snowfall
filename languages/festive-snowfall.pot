@@ -1,0 +1,279 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Festive Snowfall 2.1.0\n"
+"Report-Msgid-Bugs-To: https://github.com/cedlelensois-lang/festive-snowfall/issues\n"
+"POT-Creation-Date: 2026-11-21 22:35+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"X-Domain: festive-snowfall\n"
+
+msgid "0 disables snow on that device type."
+msgstr ""
+
+msgid "1 = very slow, 10 = very fast."
+msgstr ""
+
+msgid "Add a schedule"
+msgstr ""
+
+msgid "Asterisk"
+msgstr ""
+
+msgid "Banner position"
+msgstr ""
+
+msgid "Banner style"
+msgstr ""
+
+msgid "Both days are included. The site time zone (Settings > General) is used."
+msgstr ""
+
+msgid "CSS selector"
+msgstr ""
+
+msgid "Candy canes"
+msgstr ""
+
+msgid "Christmas"
+msgstr ""
+
+msgid "Christmas trees"
+msgstr ""
+
+msgid "Classic crystal"
+msgstr ""
+#, php-format
+
+msgid "Colour %d"
+msgstr ""
+
+msgid "Colours"
+msgstr ""
+
+msgid "Computer"
+msgstr ""
+#, php-format
+
+msgid "Copy of %s"
+msgstr ""
+
+msgid "Dates"
+msgstr ""
+
+msgid "Decoration"
+msgstr ""
+
+msgid "Delete"
+msgstr ""
+
+msgid "Delete this schedule?"
+msgstr ""
+
+msgid "Duplicate"
+msgstr ""
+
+msgid "Each schedule has its own dates and style. When several schedules overlap, the first one in the list wins: put short periods (e.g. 24–25 December) above longer ones."
+msgstr ""
+
+msgid "Enable Festive Snowfall"
+msgstr ""
+
+msgid "Falling snowflakes and festive banners (15 Christmas styles) with date-based schedules: each period can have its own flakes, colours, speed and banner."
+msgstr ""
+
+msgid "Festive Snowfall"
+msgstr ""
+
+msgid "Fine crystal"
+msgstr ""
+
+msgid "Fixed at the top of the screen"
+msgstr ""
+
+msgid "Flake shapes (select several to mix them)"
+msgstr ""
+
+msgid "From"
+msgstr ""
+
+msgid "General"
+msgstr ""
+
+msgid "Gingerbread men"
+msgstr ""
+
+msgid "Gold tinsel"
+msgstr ""
+
+msgid "Golden stars"
+msgstr ""
+
+msgid "Hanging baubles"
+msgstr ""
+
+msgid "Hanging gifts"
+msgstr ""
+
+msgid "Height (px)"
+msgstr ""
+
+msgid "Holly garland"
+msgstr ""
+
+msgid "Inside a theme element (CSS selector below)"
+msgstr ""
+
+msgid "Live preview"
+msgstr ""
+
+msgid "Max"
+msgstr ""
+
+msgid "Maximum number of schedules reached."
+msgstr ""
+
+msgid "Min"
+msgstr ""
+
+msgid "Mistletoe"
+msgstr ""
+
+msgid "Mobile"
+msgstr ""
+
+msgid "Move down"
+msgstr ""
+
+msgid "Move up"
+msgstr ""
+
+msgid "Name"
+msgstr ""
+
+msgid "New schedule"
+msgstr ""
+
+msgid "No banner"
+msgstr ""
+
+msgid "No schedule matches today: nothing is displayed to visitors."
+msgstr ""
+#, php-format
+
+msgid "Only the first %d schedules have been kept."
+msgstr ""
+
+msgid "Ornate crystal"
+msgstr ""
+
+msgid "Pine branches"
+msgstr ""
+
+msgid "Poinsettias"
+msgstr ""
+
+msgid "Quantity"
+msgstr ""
+
+msgid "Red ribbon and bows"
+msgstr ""
+
+msgid "Repeat every year (only day and month are used)"
+msgstr ""
+
+msgid "Round snowball"
+msgstr ""
+
+msgid "Schedule"
+msgstr ""
+#, php-format
+
+msgid "Schedule %d"
+msgstr ""
+#, php-format
+
+msgid "Schedule %d: invalid date, the default date has been used."
+msgstr ""
+#, php-format
+
+msgid "Schedule %d: the end date is before the start date, it will never be displayed."
+msgstr ""
+
+msgid "Schedules"
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Show falling snowflakes"
+msgstr ""
+
+msgid "Shows the schedule you are editing. Remember to save."
+msgstr ""
+
+msgid "Size (px)"
+msgstr ""
+
+msgid "Snow and icicles"
+msgstr ""
+
+msgid "Snowflakes"
+msgstr ""
+
+msgid "Snowmen"
+msgstr ""
+
+msgid "Speed"
+msgstr ""
+
+msgid "Star"
+msgstr ""
+
+msgid "Testing"
+msgstr ""
+#, php-format
+
+msgid "Testing mode: administrators see the schedule “%s” whatever the date."
+msgstr ""
+
+msgid "Testing: always show this schedule to administrators"
+msgstr ""
+
+msgid "The banner is inserted at the start of the first matching element. If none is found, it falls back to the top of the page."
+msgstr ""
+
+msgid "The decoration is disabled."
+msgstr ""
+
+msgid "Today"
+msgstr ""
+#, php-format
+
+msgid "Today, visitors see the schedule “%s”."
+msgstr ""
+
+msgid "Toggle light / dark background"
+msgstr ""
+
+msgid "Top of the page (scrolls with the content)"
+msgstr ""
+
+msgid "Twinkling light string"
+msgstr ""
+
+msgid "Up to 6 colours; each flake picks one at random. Leave empty to skip."
+msgstr ""
+
+msgid "Your site header"
+msgstr ""
+
+msgid "e.g. Advent, Christmas Eve, New Year"
+msgstr ""
+
+msgid "every year"
+msgstr ""
+
+msgid "to"
+msgstr ""

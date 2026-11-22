@@ -3,6 +3,11 @@
 All notable changes to this project are documented here.
 Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) · Versioning: [SemVer](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+- Author is now Cédric Malvache (with author link to the GitHub profile).
+
 ## [2.1.1] – 2026-11-22
 
 ### Added

@@ -174,7 +174,7 @@ final class Festive_Snowfall_Updater {
 			'name'          => 'Festive Snowfall',
 			'slug'          => self::SLUG,
 			'version'       => $release['version'],
-			'author'        => 'CGVL Merville',
+			'author'        => 'Cédric Malvache',
 			'homepage'      => $release['url'],
 			'download_link' => $release['package'],
 			'requires'      => '6.3',
